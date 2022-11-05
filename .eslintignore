@@ -1,2 +1,4 @@
 webpack
 public
+.eslintrc.js
+tsconfig.json
