@@ -1,0 +1,114 @@
+.table {
+  overflow-x: auto;
+  padding: 2rem 1rem;
+  border: 1px solid #dddddd;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    select {
+      display: inline-flex;
+      align-items: center;
+      color: rgb(165, 161, 161);
+      border: 1px solid rgb(182, 182, 182);
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        background-color: rgb(236, 233, 233);
+      }
+    }
+    .search {
+      position: relative;
+      .icon-wrapper {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 0;
+        padding-left: 1rem;
+        pointer-events: none;
+      }
+      input {
+        display: block;
+        padding: 0.5rem;
+        width: 10rem;
+        color: gray;
+        border-radius: 10px;
+        background-color: white;
+        border: 1px solid rgb(182, 182, 182);
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  &__main {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      text-transform: uppercase;
+      th {
+        position: sticky;
+        top: 0;
+        background-color: black;
+        color: #e6e7e8;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+    th,
+    td {
+      border-bottom: 1px solid #dddddd;
+      padding: 10px 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #dddddd;
+        }
+        &:nth-child(odd) {
+          background-color: #edeef1;
+        }
+        &:hover {
+          td {
+            color: #44b478;
+            cursor: pointer;
+            background-color: #ffffff;
+          }
+        }
+        td {
+          button {
+            border: none;
+            padding: 7px 20px;
+            border-radius: 20px;
+            background-color: #44b478;
+            color: white;
+            cursor: pointer;
+            &:hover {
+              background-color: #1bd170;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    button {
+      border: none;
+      padding: 0.4rem;
+      margin: 2px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
