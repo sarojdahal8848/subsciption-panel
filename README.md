@@ -1,4 +1,4 @@
-# Github Profile
+# Subscriber Dashboard
 
 
 ## Screenshots
