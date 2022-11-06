@@ -172,7 +172,7 @@ const HomePage = () => {
       <CustomTable
         columns={columns}
         data={data}
-        title="subscriber"
+        title="Subscriber List"
         handleSearch={handleSearch}
         handleClick={handleClick}
       />
