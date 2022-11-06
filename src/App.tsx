@@ -1,5 +1,5 @@
-import { HomePage } from './pages';
+import RoutePage from './RoutePage';
 import './styles.scss';
 export const App = () => {
-  return <HomePage />;
+  return <RoutePage />;
 };

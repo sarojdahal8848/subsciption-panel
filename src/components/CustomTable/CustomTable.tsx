@@ -31,6 +31,7 @@ export interface ICustomTable {
   data: ITableRows[];
   title: string;
   handleSearch: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleClick: (id: number) => void;
 }
 
 const CustomTable: React.FC<ICustomTable> = ({
@@ -38,6 +39,7 @@ const CustomTable: React.FC<ICustomTable> = ({
   data,
   title,
   handleSearch,
+  handleClick,
 }) => {
   const { length } = data;
   const [rows, setRows] = useState<ITableRows[]>([]);
@@ -51,6 +53,10 @@ const CustomTable: React.FC<ICustomTable> = ({
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleSearch(e);
+  };
+
+  const handleViewClick = (id: number) => {
+    handleClick(id);
   };
 
   const handlePageChanage = (page: number) => {
@@ -162,7 +168,7 @@ const CustomTable: React.FC<ICustomTable> = ({
                 </button>
               </td>
               <td>
-                <button>View</button>
+                <button onClick={() => handleViewClick(row.id)}>View</button>
               </td>
             </tr>
           ))}
