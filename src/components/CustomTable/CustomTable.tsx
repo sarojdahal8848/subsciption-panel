@@ -151,7 +151,9 @@ const CustomTable: React.FC<ICustomTable> = ({
           {rows.map((row) => (
             <tr key={row.id}>
               <td>{row.id}</td>
-              <td>{row.first_name}</td>
+              <td>
+                {row.first_name} {row.middle_name} {row.last_name}
+              </td>
               <td>{row.email}</td>
               <td>{row.username}</td>
               <td>{row.address}</td>
